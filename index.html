@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <title>DT</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light"
+        style="box-shadow: 0 3px 3px -3px rgba(24, 21, 21, 0.9);">
+        <div class="container-fluid">
+
+            <!-- Slide - nav-icon -->
+            <a href="#" onclick="openSide()">
+                <svg viewBox="0 0 100 80" width="30" height="30">
+                    <rect width="100" height="10"></rect>
+                    <rect y="30" width="100" height="10"></rect>
+                    <rect y="60" width="100" height="10"></rect>
+                </svg>
+            </a>
+
+            <!-- LOGO -->
+            <a class="navbar-brand" style="padding: 3px;" href="#"><img style="margin-left: 3px; size: 10px;" src="https://deepthought.education/assets/images/logo/logo.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-screwdriver-wrench"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-bell"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Side nav -->
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSide()"></a>
+        <div class="journey-board bg-dark">
+            <h3 class="journey-text" style="color: white;">Journey Board</h3>
+        </div>
+        <h3 class="side-title">1. Name of the task goes here</h3>
+        <ul>
+            <li style="color: black;">Asset heading 1</li>
+            <hr>
+            <li style="color: black;">Asset heading 2</li>
+            <hr>
+            <li style="color: black;">Asset heading 3</li>
+            <hr>
+            <li style="color: black;">Asset heading 4</li>
+            <hr>
+            <li style="color: black;">Asset heading 5</li>
+        </ul>
+    </div>
+
+    <!-- Script for slide button functinality -->
+    <script>
+        function openSide() {
+            document.getElementById('side-menu').style.width = '350px';
+        }
+
+        function closeSide() {
+            document.getElementById('side-menu').style.width = '0';
+        }
+    </script>
+
+    <!-- Main section -->
+    <section id="main" class="container">
+        <div class="head">
+            <h5>You are taking challenges of a new project.</h5>
+        </div>
+        <h4 id="task-title">
+            Demo Task
+        </h4>
+        <div class="container main-content" style="position: relative ; align-items: center; margin-left: 70px; margin-right: 0;">
+            <div class="flex">
+
+                <!-- Bootstrap accordion used for collapse functionality-->
+
+
+                <!-- #1 -->
+                <div class="accordion flex" id="accordionExample">
+                    <div class="accordion-item flex">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button button12" >
+                                <h5 id="assetHeading1" style="text-align: center;"></h5>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample" style="width: 100%;">
+                            <div class="accordion-body" style="display: flex; justify-content: center">
+                                <div class="accordion-body" id="desc1"></div>
+                            </div>
+                            <div class="accordion-body" style="display: flex; justify-content: center">
+                                <textarea id="task3" name="w3review" rows="8">Reflect as per given guidelines</textarea>
+                            </div>
+                        </div>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    </button>
+                    </div>
+
+                    <!-- #2 -->
+                    <div class="accordion-item flex">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button button12">
+                                <h5 id="assetHeading2" style="text-align: center;"></h5>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body" id="desc2">
+                            </div>
+                        </div>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    </button>
+                    </div>
+
+
+                    <!-- #3 -->
+                    <div class="accordion-item flex">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button button12">
+                                <h5 id="assetHeading3" style="text-align: center;"></h5>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body" style="font-weight: bold;" id="desc3">
+                            </div>
+                        </div>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+
+                    </button>
+                    </div>
+
+                    <!-- #4 -->
+                    <div class="accordion-item flex">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button button12">
+                                <h5 id="assetHeading4" style="text-align: center;"></h5>
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample" style="width: 100%;">
+                            <div class="accordion-body" style="font-weight: bold;" id="desc4">
+                            </div>
+                            <div class="accordion-body" style="height: 500px; width: 100%;">
+                                <embed
+                                    src=" https://drive.google.com/file/d/1Pxw83bTKE3KkOyYnwm1u6DSVjntSrNTp/preview" />
+                            </div>
+                        </div>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    </button>
+                    </div>
+
+                    <!-- #5 -->
+                    <div class="accordion-item flex">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button button12">
+                                <h5 id="assetHeading5" style="text-align: center;"></h5>
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body" style="font-weight: bold;" id="desc5">
+                            </div>
+                            <div class="accordion-body">
+                                <embed src="https://media.giphy.com/media/IzjhI7ggjDlEnMxZMu/giphy.gif" type="">
+                            </div>
+                        </div>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                    </button>
+                    </div>
+
+                    <!-- #6 -->
+                    <div class="accordion-item flex">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button button12">
+                                <h5 id="assetHeading6" style="text-align: center;"></h5>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body" style="font-weight: bold;" id="desc6">
+                            </div>
+                        </div>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    </button>
+                    </div>
+
+                    <!-- #7 -->
+                    <div class="accordion-item flex">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button button12">
+                                <h5 id="assetHeading7" style="text-align: center;"></h5>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body" style="font-weight: bold;" id="desc7">
+                            </div>
+                        </div>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    </button>
+                    </div>
+
+                    <!-- #8 -->
+                    <div class="accordion-item flex">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button button12" >
+                                <h5 id="assetHeading8" style="text-align: center;"></h5>
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix"
+                            data-bs-parent="#accordionExample" style="width: 100%;">
+                            <div class="accordion-body" style="font-weight: bold;" id="desc8">
+                            </div>
+                            <div class="accordion-body">
+                                <embed src="https://drive.google.com/file/d/1dBBYQsz2yt3vc4YMkRmVC3nuTBbq2GON/preview"
+                                    type="">
+                            </div>
+                        </div>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                    </button>
+                    </div>
+
+                    <!-- #9 -->
+                    <div class="accordion-item flex">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button button12">
+                                <h5 id="assetHeading9" style="text-align: center;"></h5>
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven"
+                            data-bs-parent="#accordionExample" style="width: 100%; height:100%">
+                            <div class="accordion-body" style="font-weight: bold;" id="desc9">
+                            </div>
+                            <div class="accordion-body">
+                                <embed src="https://www.youtube.com/embed/s8H0Sx7jy7c" type="">
+                            </div>
+                        </div>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                    </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Bootstrap submit button -->
+    <div class="button-submit" style="float: right; margin: 10px;">
+        <button style="margin-right: 50px; margin-bottom: 45px;"
+            class="btn btn-primary">Submit</button>
+    </div>
+</body>
+
+</html>
